@@ -1,0 +1,23 @@
+Enunciado:
+
+Algunas cámaras digitales utilizan un optical low pass filter (OLPF)
+Investigar para que se utiliza. Todas las cámaras digitales lo tienen?
+Buscar ejemplos.
+
+Respuesta:
+
+El Optical Low Pass Filter (OLPF) es un filtro optico que trabaja sobre la luz de la escena antes de que esta llegue al 
+sensor de las camaras digitales para evitar o minimizar los efectos del aliasing. Un filtro pasa bajo lo que hace es dejar 
+pasar la informacion de baja frecuencia y bloquear la de alta frecuencia; esto es justamente lo que hace el OLPF. 
+
+Es importante el uso del este tipo de filtros dado que una vez que llega la imagen, si esta tiene aliasing ya no se puede recuperar
+la imagen original. Esto ademas de sus ventajas tiene desventajas tales como que se aplica siempre independientemente si la escena 
+lo necesita o no y que al filtrar las altas frecuencias se pierde la nitidez de la imagen. Por esta ultima desventaja, cada filtro OLPF 
+se diseña con el compromiso de minimizar los efectos mas visibles del aliasing sin que afecte demasiado la nitidez. Es por esto que no 
+todos los filtros OLPF son iguales ni afectan a los sensores de la misma manera, de hecho hay distintas prioridades como la eliminacion 
+del efecto de Moire para lo cual se usan filtros muy agresivos o la priorizacion de la nitidez para lo cual usan un filtro suave o directamente no lo usan.
+
+La Nikon D5200 utiliza un filtro OLPF fuerte para reducir el moiré, lo que causa una ligera pérdida de nitidez en su sensor de 24 Mp. 
+La Nikon D5300 elimina el filtro para priorizar la nitidez, pero aumenta el riesgo de aliasing. En las gamas altas, la Nikon D800 tiene filtro OLPF, 
+mientras que la D800e no, lo que resulta en una diferencia notable de nitidez en sus sensores de 36 Mp. 
+En Canon, la EOS 700D y la EOS 7D comparten sensor, pero la 7D tiene un filtro OLPF más agresivo, causando una leve pérdida de contraste frente a la 700D.
