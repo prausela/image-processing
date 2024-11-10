@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="phantomBox">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>611</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Phantom</string>
+    </property>
+    <widget class="QGraphicsView" name="phantomGraphicsView">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>30</y>
+       <width>331</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="actualizarButton">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>300</y>
+       <width>331</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Actualizar</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>341</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="borrarButton">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>380</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Borrar</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="agregarButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>121</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Agregar</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>166</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="intensidadLabel">
+        <property name="text">
+         <string>Intensidad</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="intensidadLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="semiEjeXLabel">
+        <property name="text">
+         <string>Semi-eje-X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="semiEjeXLineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="centroXLabel">
+        <property name="text">
+         <string>Centro X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="centroXLineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>430</y>
+       <width>160</width>
+       <height>83</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="inclinacionLabel">
+        <property name="text">
+         <string>Inclinación</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="inclinacionLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="semiEjeYLabel">
+        <property name="text">
+         <string>Semi-eje-Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="semiEjeYLineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="centroYLabel">
+        <property name="text">
+         <string>Centro Y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="centroYLineEdit"/>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="radonBox">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>9</y>
+      <width>521</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Radon</string>
+    </property>
+    <widget class="QGraphicsView" name="radonGraphicsView">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>331</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>160</width>
+       <height>83</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="desdeLabel">
+        <property name="text">
+         <string>Desde</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="desdeLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="pasoLabel">
+        <property name="text">
+         <string>Paso</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="pasoLineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="hastaLabel">
+        <property name="text">
+         <string>Hasta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="hastaLineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="calcularButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>161</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>160</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_5">
+      <item row="0" column="0">
+       <widget class="QLabel" name="anguloLabel">
+        <property name="text">
+         <string>Ángulo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="anguloLineEdit"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="verButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>151</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ver</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>319</y>
+      <width>521</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>iRadon</string>
+    </property>
+    <widget class="QGraphicsView" name="radonGraphicsView_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>30</y>
+       <width>331</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>161</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="iDesdeLabel">
+        <property name="text">
+         <string>Desde</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="iDesdeLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="iPasoLabel">
+        <property name="text">
+         <string>Paso</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="iPasoLineEdit"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="iHastaLabel">
+        <property name="text">
+         <string>Hasta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="hastaLineEdit_2"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="formLayoutWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>161</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout_6">
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="interpolacionLabel">
+        <property name="text">
+         <string>Interpolación</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLabel" name="filtroLabel">
+        <property name="text">
+         <string>Filtro</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QComboBox" name="interpolacionComboBox"/>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QComboBox" name="filtroComboBox"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="iCalcularButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>161</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calcular</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
