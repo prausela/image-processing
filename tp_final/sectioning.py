@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import math
 
 ## PRIVATE FUNCTIONS ##
 
@@ -10,14 +11,15 @@ SECTION_HIGHEST = 1
 
 def _ranges_intersect(
         limit_a: tuple[int, int],
-        limit_b: tuple[int, int]
+        limit_b: tuple[int, int],
+        tol: float
         ) -> bool:
     min_a, max_a = limit_a
     min_b, max_b = limit_b
     if min_a < min_b:
-        return max_a >= min_b
+        return max_a+tol >= min_b
     else:
-        return max_b >= min_a
+        return max_b+tol >= min_a
     
 def _augment_range(
         limit_a: tuple[int, int],
@@ -31,11 +33,12 @@ def _augment_range(
     
 def _sections_intersect(
         section_a: tuple[tuple[int, int], tuple[int, int]],
-        section_b: tuple[tuple[int, int], tuple[int, int]]
+        section_b: tuple[tuple[int, int], tuple[int, int]],
+        tol: float
         ) -> bool:
     vertical_limits_a, horizontal_limits_a = section_a
     vertical_limits_b, horizontal_limits_b = section_b
-    return _ranges_intersect(horizontal_limits_a, horizontal_limits_b) and _ranges_intersect(vertical_limits_a, vertical_limits_b)
+    return _ranges_intersect(horizontal_limits_a, horizontal_limits_b, tol) and _ranges_intersect(vertical_limits_a, vertical_limits_b, tol)
 
 def _augment_section(
         section_a: tuple[tuple[int, int], tuple[int, int]],
@@ -116,7 +119,8 @@ def sectionize_image(
     return sectionized_image
 
 def merge_all_sections(
-        sections_limits: list[tuple[tuple[int, int], tuple[int, int]]]
+        sections_limits: list[tuple[tuple[int, int], tuple[int, int]]],
+        tol: float = 0
     ) -> list[tuple[tuple[int, int], tuple[int, int]]]:
     
     have_intersected = True
@@ -127,7 +131,7 @@ def merge_all_sections(
         group_labels_aux = list(range(len(sections_limits)))
         for i in range(len(sections_limits)):
             for j in range(len(sections_limits)):
-                if i != j and _sections_intersect(sections_limits[i], sections_limits[j]):
+                if i != j and _sections_intersect(sections_limits[i], sections_limits[j], tol):
                     have_intersected = True
                     group_label = min(group_labels_aux[i], group_labels_aux[j])
                     group_labels_aux[i] = group_label
